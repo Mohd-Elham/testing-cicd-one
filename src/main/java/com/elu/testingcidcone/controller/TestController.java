@@ -10,12 +10,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-public class TestController {
+public final class TestController {
 
+    /**
+     * Test endpoint returning a simple JSON message.
+     *
+     * @return HTTP 200 with a JSON body containing "message": "test"
+     */
     @GetMapping("/test")
-    public ResponseEntity<?> test(){
-        Map<String,Object> map = new HashMap<>();
-        map.put("message","test");
+    public ResponseEntity<?> test() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("message", "test");
 
         return new ResponseEntity<>(map, HttpStatus.OK);
     }
