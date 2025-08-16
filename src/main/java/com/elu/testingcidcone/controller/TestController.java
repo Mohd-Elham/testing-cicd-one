@@ -18,7 +18,7 @@ public final class TestController {
      * @return HTTP 200 with a JSON body containing "message": "test"
      */
     @GetMapping("/test")
-    public ResponseEntity<?> test() {
+    public ResponseEntity<Map<String, Object>> test() {
         Map<String, Object> map = new HashMap<>();
         map.put("message", "test");
 
