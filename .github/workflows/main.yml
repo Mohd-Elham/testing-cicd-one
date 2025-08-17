@@ -30,7 +30,8 @@ jobs:
         run: mvn checkstyle:check
 
       - name: SonarQube Scan
-        run: mvn sonar:sonar \
+        run: | 
+            mvn sonar:sonar \
             -Dsonar.projectKey=Mohd-Elham_testing-cicd-one \
             -Dsonar.organization=mohd-elham \
             -Dsonar.host.url=https://sonarcloud.io \
