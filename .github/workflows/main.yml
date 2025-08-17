@@ -30,12 +30,8 @@ jobs:
         run: mvn checkstyle:check
 
       - name: SonarQube Scan
-        run: |
-          mvn sonar:sonar \
-            -Dsonar.projectKey=Mohd-Elham_testing-cicd-one \
-            -Dsonar.organization=mohd-elham \
-            -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: mvn sonar:sonar -Dsonar.projectKey=Mohd-Elham_testing-cicd-one -Dsonar.organization=mohd-elham -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+
       
 
       # 4. Log in to Docker Hub
