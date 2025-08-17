@@ -31,8 +31,8 @@ jobs:
 
       - name: SonarQube Scan
         run: mvn sonar:sonar \
-            -Dsonar.projectKey=my_project_key \
-            -Dsonar.organization=my_org \
+            -Dsonar.projectKey=Mohd-Elham_testing-cicd-one \
+            -Dsonar.organization=mohd-elham \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
